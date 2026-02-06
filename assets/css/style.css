@@ -1,0 +1,408 @@
+:root {
+    --primary-green: #4B5320;
+    /* Verde Militar Clássico */
+    --secondary-green: #626D39;
+    --accent-gold: #B8860B;
+    /* Toque de bronze para autoridade */
+    --light-bg: #F5F5F2;
+    --text-dark: #2D311B;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: var(--primary-green);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-gold);
+}
+
+/* --- SEÇÃO 1: HERO --- */
+#home {
+    height: 80vh;
+    background: linear-gradient(rgba(75, 83, 32, 0.8), rgba(75, 83, 32, 0.8)),
+        url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    color: var(--white);
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+#home p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background-color: var(--accent-gold);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background-color: #966d08;
+}
+
+/* --- SEÇÃO 2: FUNCIONALIDADES --- */
+#features {
+    padding: 100px 10%;
+    background-color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.feature-card {
+    padding: 2rem;
+    border-bottom: 4px solid var(--secondary-green);
+    background: var(--light-bg);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+/* --- SEÇÃO 3: CONTATO --- */
+#contact {
+    padding: 100px 10%;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fafafa;
+}
+
+button.send-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button.send-btn:hover {
+    opacity: 0.9;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--primary-green);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.2rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Menu hamburguer pode ser adicionado depois */
+    #contact {
+        padding: 50px 5%;
+    }
+}
+
+.demo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.demo-image img {
+    height: 60vh;
+}
+
+.demo-text {
+    flex: 1;
+}
+
+/* Botão Flutuante */
+#chat-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background: var(--accent-gold);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.3s;
+}
+
+#chat-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Janela de Chat */
+#chat-container {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Começa escondido */
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+#chat-header {
+    background: var(--primary-green);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-input-area {
+    padding: 10px;
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input-area input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+#chat-input-area button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--primary-green);
+}
+
+/* Estilo das Mensagens no Widget */
+.msg {
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    max-width: 85%;
+    margin-bottom: 12px;
+}
+
+.bot {
+    align-self: flex-start;
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 2px;
+}
+
+.user {
+    align-self: flex-end;
+    background: var(--primary-green); /* Usando seu verde militar */
+    color: white;
+    border-bottom-right-radius: 2px;
+    margin-left: auto;
+}
+
+/* --- TRANSFORMANDO LINKS EM CARDS/BOTÕES --- */
+.bot a {
+    display: block;
+    margin-top: 10px;
+    padding: 12px 15px;
+    background-color: #ffffff;
+    color: var(--primary-green);
+    text-decoration: none;
+    border: 2px solid var(--primary-green);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.bot a:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.bot a strong {
+    display: block;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+/* --- ANIMAÇÃO DE DIGITAÇÃO --- */
+.typing {
+    align-self: flex-start;
+    background: #e4e6eb;
+    color: #707070;
+    font-size: 13px;
+    padding: 8px 15px;
+    border-radius: 15px;
+    display: none; /* Escondido por padrão */
+    margin-bottom: 10px;
+}
+
+.typing span::after {
+    content: '';
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+}
+
+@media (max-width: 768px) {
+    .demo-container {
+        flex-direction: column;
+    }
+
+    #chat-container {
+        width: 90%;
+        right: 5%;
+        bottom: 90px;
+    }
+}

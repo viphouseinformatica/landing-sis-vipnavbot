@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIPNAV.BOT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("SEU_PUBLIC_KEY_AQUI"); // Você pega isso no painel do EmailJS
+        })();
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">VIPNAV.BOT</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#contact">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Sua navegação no portal,<br>agora em missão oficial.</h1>
+            <p>O Assistente Inteligente que encontra qualquer serviço da Prefeitura em segundos. Sem
+                burocracia, sem cliques perdidos.</p>
+            <a href="#contact" class="cta-button">Começar agora</a>
+        </section>
+
+        <section id="features">
+            <div class="section-title">
+                <h2>Inteligência e Precisão</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Busca Semântica</h3>
+                    <p>O bot entende o que você quer dizer, não apenas o que você digita. Procure por "abrir firma" e
+                        ele saberá que você precisa de um Alvará.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Acesso Direto</h3>
+                    <p>Links oficiais e seguros gerados em formato de cards clicáveis para facilitar a sua jornada no
+                        portal municipal.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Disponibilidade 24/7</h3>
+                    <p>O suporte que não dorme. Informações sobre IPTU, Coleta de Lixo e Certidões a qualquer hora do
+                        dia ou da noite.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" style="padding: 100px 10%; background-color: #f9f9f7;">
+            <div class="demo-container">
+                <div class="demo-image">
+                    <img src="assets/img/demonavbot.png" alt="Demonstração do Bot"
+                        style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                </div>
+                <div class="demo-text">
+                    <h2 style="color: var(--primary-green); font-size: 2.5rem; margin-bottom: 1.5rem;">Sua bússola
+                        digital no mar de serviços públicos</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">O <strong>VIPNAV.BOT</strong> não apenas
+                        responde
+                        perguntas; ele atua como um GPS dentro do portal. Ao identificar sua necessidade, o assistente
+                        gera instantaneamente um card de acesso direto para o serviço solicitado.</p>
+                    <ul style="list-style: none; font-weight: 700; color: var(--secondary-green);">
+                        <li style="margin-bottom: 10px;">✓ Redução de cliques em até 80%</li>
+                        <li style="margin-bottom: 10px;">✓ Busca inteligente por contexto (Semântica)</li>
+                        <li style="margin-bottom: 10px;">✓ Links verificados e seguros</li>
+                        <li style="margin-bottom: 10px;">✓ Integrado com Google AI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-title">
+                <h2>Fale Conosco</h2>
+            </div>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <input type="text" name="name" placeholder="Seu nome aqui..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="email" placeholder="exemplo@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea name="message" rows="5" placeholder="Como podemos ajudar?"></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 VIP Navigation BOT - VIP SOLUÇÕES TÉCNOLÓGICAS. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="chat-widget">
+        <button id="chat-toggle" title="Abrir Chat">💬</button>
+        <div id="chat-container">
+            <div id="chat-header">
+                <strong>VIPNAV.BOT</strong>
+                <span id="close-chat">×</span>
+            </div>
+            <div id="chat-messages">
+            </div>
+            <div id="chat-input-area">
+                <input type="text" id="user-input" placeholder="Ex: Preciso do boleto do IPTU...">
+                <button id="send-chat-btn">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
