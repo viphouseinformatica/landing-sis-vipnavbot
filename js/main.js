@@ -7,8 +7,8 @@ document.getElementById('contact-form').onsubmit = function(event) {
     btn.disabled = true; // Evita cliques duplos
 
     // Substitua pelos seus IDs reais do painel EmailJS
-    const serviceID = 'default_service'; 
-    const templateID = 'seu_template_id';
+    const serviceID = 'V_DEFAULT_SERVICE'; 
+    const templateID = 'V_TEMPLATE_ID';
 
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
@@ -102,7 +102,7 @@ async function sendToBot() {
     toggleTyping(true); // Ativa o "digitando"
 
     try {
-        const response = await fetch('http://127.0.0.1:8000/chat', {
+        const response = await fetch('https://sis-chatbot-gov-python.onrender.com/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ user_id: userId, mensagem: message })
