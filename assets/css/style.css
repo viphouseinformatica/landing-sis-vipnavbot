@@ -150,6 +150,15 @@ nav ul li a:hover {
     color: var(--primary-green);
 }
 
+/* ---- FOTO ---  */
+.demo-image {
+    transition: transform 0.3s;
+}
+
+.demo-image:hover {
+    transform: translateY(-10px);
+}
+
 /* --- SEÇÃO 3: CONTATO --- */
 #contact {
     padding: 100px 10%;
