@@ -7,8 +7,8 @@ document.getElementById('contact-form').onsubmit = function(event) {
     btn.disabled = true; // Evita cliques duplos
 
     // Substitua pelos seus IDs reais do painel EmailJS
-    const serviceID = 'V_DEFAULT_SERVICE'; 
-    const templateID = 'V_TEMPLATE_ID';
+    const serviceID = 'V_EMAILJS_SERVICE_ID'; 
+    const templateID = 'V_EMAILJS_TEMPLATE_ID';
 
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
